@@ -22,44 +22,6 @@ A modern and responsive landing page built using React, Vite, CSS, and GSAP anim
 - GSAP
 - ScrollTrigger
 
-## Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/elementum-landing-page.git
-```
-
-Navigate to the project folder:
-
-```bash
-cd elementum-landing-page
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Run the development server:
-
-```bash
-npm run dev
-```
-
-Build for production:
-
-```bash
-npm run build
-```
-
-Preview production build:
-
-```bash
-npm run preview
-```
-
 ## Project Structure
 
 ```text
