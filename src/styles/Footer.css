@@ -1,0 +1,175 @@
+.footer {
+    position: relative;
+    background: #D7EEDD;
+    padding: 80px 70px 40px;
+    overflow: hidden;
+}
+
+/* TOP LINES */
+
+.footer-lines{
+    position:absolute;
+    left:520px;
+    top:0;
+    z-index:2;
+}
+
+.footer-lines svg{
+    overflow:visible;
+}
+
+.footer-lines path{
+    fill:none;
+    stroke:#FF6D6D;
+    stroke-width:2;
+    stroke-linecap:round;
+}
+
+/* PURPLE SHAPE */
+
+.footer-shape {
+    position: absolute;
+
+    right: 140px;
+    top: 90px;
+
+    width: 80px;
+    height: 140px;
+    background: #934CEC;
+
+     border-radius: 100px 0 0 100px;
+
+    transform: rotate(35deg);
+}
+
+/* NEWSLETTER */
+
+.newsletter {
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-size: clamp(2.2rem, 8vw, 5.8rem);
+    line-height: .95;
+    font-weight: 400;
+}
+
+.newsletter p {
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 0 20px;
+}
+
+.newsletter button {
+    margin-top: 30px;
+
+    border: none;
+    background: black;
+    color: white;
+
+    padding: 18px 40px;
+
+    border-radius: 40px;
+
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.newsletter button:hover {
+    background-color: #222;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.newsletter button:active {
+    transform: translateY(0);
+}
+
+/* DIVIDER */
+
+.footer-divider {
+    margin-top: 80px;
+    border-top: 1px solid rgba(0, 0, 0, .15);
+}
+
+/* GRID */
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.footer-grid h4 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.footer-grid a,
+.footer-grid p {
+    display: block;
+    margin-bottom: 18px;
+    text-decoration: none;
+    color: #222;
+    font-size: 16px;
+}
+
+.footer-grid a {
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-grid a:hover {
+    color: #ea7b7b;
+    transform: translateX(4px);
+}
+
+/* COPYRIGHT */
+
+.copyright {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px) {
+
+    .footer-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .newsletter h2 {
+        font-size: 58px;
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .footer {
+        padding: 60px 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter h2 {
+        font-size: 42px;
+    }
+
+    .footer-shape {
+        display: none;
+    }
+
+    .footer-lines {
+        display: none;
+    }
+
+}

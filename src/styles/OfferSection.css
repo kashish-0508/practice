@@ -1,0 +1,177 @@
+.offer{
+    position:relative;
+    padding:120px 80px;
+   
+    overflow:hidden;
+}
+
+/* HEADING */
+
+.offer-heading{
+    position:relative;
+    width:max-content;
+}
+
+.offer-heading h2{
+    font-size: clamp(1.2rem, 6.5vw, 4.6rem);
+    line-height:.9;
+    font-weight:400;
+    margin:0;
+}
+
+.highlight{
+    background:#D7EEDD;
+    border-radius:40px;
+   
+}
+
+/* Yellow Scribble */
+
+.yellow-stroke{
+    position:absolute;
+
+    width:210px;
+    height:12px;
+
+    left:-10px;
+    bottom:-8px;
+
+    border-top:3px solid #FFC250;
+    border-bottom:3px solid #FFC250;
+
+    transform:rotate(-2deg);
+}
+
+/* WAVE */
+
+.offer-wave{
+    position:absolute;
+
+    right:-40px;
+    top:40px;
+
+    width:520px;
+    height:180px;
+    transition: all 0.3s ease;
+}
+
+.offer-wave path{
+    fill:none;
+    stroke:#FF6D6D;
+    stroke-width:3;
+}
+
+/* LIST */
+
+.offer-list{
+    margin-top:70px;
+}
+
+.offer-row{
+    display:grid;
+    grid-template-columns:220px 1fr 80px;
+    align-items:center;
+    padding:28px 12px;
+    border-top:1px solid #d7d7d7;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.offer-row:last-child{
+    border-bottom:1px solid #d7d7d7;
+}
+
+/* GSAP handles these row hover states dynamically and smoothly */
+/*
+.offer-row:hover {
+    background-color: rgba(220, 232, 214, 0.3);
+    padding-left: 24px;
+    transform: translateX(8px);
+}
+*/
+
+.offer-left{
+    font-size:16px;
+    line-height:1.5;
+    color:#333;
+}
+
+.offer-center{
+    font-size: 56px;
+    line-height:1.1;
+    padding-left:160px;
+    transition: padding 0.3s ease;
+}
+
+.offer-arrow{
+    font-size:42px;
+    text-align:center;
+    transition: transform 0.3s ease;
+}
+
+/* GSAP handles these row hover states dynamically and smoothly */
+/*
+.offer-row:hover .offer-arrow {
+    transform: translateX(5px);
+}
+*/
+
+/* TABLET */
+
+@media(max-width:1200px){
+  .offer-wave {
+    width: 380px;
+    height: 130px;
+    right: -20px;
+  }
+}
+
+@media(max-width:1024px){
+  .offer {
+    padding: 100px 40px;
+  }
+
+  .offer-wave {
+    display: none;
+  }
+
+  .offer-row {
+    grid-template-columns: 180px 1fr 60px;
+    padding: 24px 8px;
+  }
+
+  .offer-center {
+    padding-left: 40px; /* Crucial fix for tablets */
+  }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.offer{
+    padding:80px 20px;
+}
+
+.offer-row{
+    grid-template-columns:1fr;
+    gap:10px;
+    padding: 20px 8px;
+}
+
+.offer-row:hover {
+    padding-left: 12px;
+    transform: none; /* Disable horizontal slide on small screens to prevent overflow */
+}
+
+.offer-center{
+    padding-left:0;
+}
+
+.offer-arrow{
+    text-align:left;
+    font-size: 28px;
+}
+
+}
